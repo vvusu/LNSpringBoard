@@ -1,0 +1,324 @@
+
+@interface NCNotificationManagementViewPresenter
+@end
+@interface SBFTouchPassThroughView
+@end
+@interface SBLockScreenSettings
+@end
+@interface NCNotificationRequest
+@end
+@interface DNDEventBehaviorResolutionService
+@end
+@interface NCNotificationListCoalescingManager
+@end
+@interface SBDashBoardNotificationAdjunctListViewController
+@end
+@interface DNDStateService
+@end
+@interface SBDashBoardLayoutStrategy
+@end
+@class SBDashBoardPageViewController;
+@protocol SBDashBoardPageViewControllerProtocol<NSObject>
+@end
+
+%hook SBDashBoardCombinedListViewController
+- (void)setManagementViewPresenter:(NCNotificationManagementViewPresenter *)managementViewPresenter { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NCNotificationManagementViewPresenter *)managementViewPresenter { NSLog(@"LN__%s", __func__) %log; NCNotificationManagementViewPresenter * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)_setDismissGestureEnabled:(_Bool )dismissGestureEnabled { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )_dismissGestureEnabled { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setDeviceAuthenticated:(_Bool )deviceAuthenticated { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )isDeviceAuthenticated { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setPresentationDirtiedAppearance:(_Bool )presentationDirtiedAppearance { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )hasPresentationDirtiedAppearance { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setNotificationContentHidden:(_Bool )notificationContentHidden { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )isNotificationContentHidden { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_setFooterCallToActionLabelHidden:(_Bool )footerCallToActionLabelHidden { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )_footerCallToActionLabelHidden { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_setDisableBackgroundAnimation:(_Bool )disableBackgroundAnimation { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )_disableBackgroundAnimation { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_setDisableScrolling:(_Bool )disableScrolling { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )_disableScrolling { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setDebugViewRight:(SBFTouchPassThroughView *)debugViewRight { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (SBFTouchPassThroughView *)debugViewRight { NSLog(@"LN__%s", __func__) %log; SBFTouchPassThroughView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setDebugViewLeft:(SBFTouchPassThroughView *)debugViewLeft { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (SBFTouchPassThroughView *)debugViewLeft { NSLog(@"LN__%s", __func__) %log; SBFTouchPassThroughView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setLockScreenSettings:(SBLockScreenSettings *)lockScreenSettings { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (SBLockScreenSettings *)lockScreenSettings { NSLog(@"LN__%s", __func__) %log; SBLockScreenSettings * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setScoreForRequestWithRemoteNotificationManagementSuggestion:(double )scoreForRequestWithRemoteNotificationManagementSuggestion { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (double )scoreForRequestWithRemoteNotificationManagementSuggestion { NSLog(@"LN__%s", __func__) %log; double  r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)setRequestWithRemoteNotificationManagementSuggestion:(NCNotificationRequest *)requestWithRemoteNotificationManagementSuggestion { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NCNotificationRequest *)requestWithRemoteNotificationManagementSuggestion { NSLog(@"LN__%s", __func__) %log; NCNotificationRequest * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setSectionIdentifiersWithNotificationManagementSuggestions:(NSMutableSet *)sectionIdentifiersWithNotificationManagementSuggestions { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NSMutableSet *)sectionIdentifiersWithNotificationManagementSuggestions { NSLog(@"LN__%s", __func__) %log; NSMutableSet * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setNotificationManagementSuggestionContentProviders:(NSMutableDictionary *)notificationManagementSuggestionContentProviders { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NSMutableDictionary *)notificationManagementSuggestionContentProviders { NSLog(@"LN__%s", __func__) %log; NSMutableDictionary * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setClearedNotificationRequests:(NSMutableSet *)clearedNotificationRequests { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NSMutableSet *)clearedNotificationRequests { NSLog(@"LN__%s", __func__) %log; NSMutableSet * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setFilteredNotificationRequests:(NSMutableOrderedSet *)filteredNotificationRequests { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NSMutableOrderedSet *)filteredNotificationRequests { NSLog(@"LN__%s", __func__) %log; NSMutableOrderedSet * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setDndDrivingModeActive:(_Bool )dndDrivingModeActive { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )isDndDrivingModeActive { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setDndNotificationDeliveryDelayActive:(_Bool )dndNotificationDeliveryDelayActive { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )isDndNotificationDeliveryDelayActive { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setDndStateService:(DNDStateService *)dndStateService { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (DNDStateService *)dndStateService { NSLog(@"LN__%s", __func__) %log; DNDStateService * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setDndEventBehaviorResolutionService:(DNDEventBehaviorResolutionService *)dndEventBehaviorResolutionService { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (DNDEventBehaviorResolutionService *)dndEventBehaviorResolutionService { NSLog(@"LN__%s", __func__) %log; DNDEventBehaviorResolutionService * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setActiveRaiseToListenNotificationRequest:(NCNotificationRequest *)activeRaiseToListenNotificationRequest { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NCNotificationRequest *)activeRaiseToListenNotificationRequest { NSLog(@"LN__%s", __func__) %log; NCNotificationRequest * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setShouldDynamicallyCoalesce:(_Bool )shouldDynamicallyCoalesce { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )shouldDynamicallyCoalesce { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setUncoalescedNotificationRequestThreads:(NSMutableDictionary *)uncoalescedNotificationRequestThreads { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NSMutableDictionary *)uncoalescedNotificationRequestThreads { NSLog(@"LN__%s", __func__) %log; NSMutableDictionary * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setPhoneNotificationCoalescingManager:(NCNotificationListCoalescingManager *)phoneNotificationCoalescingManager { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NCNotificationListCoalescingManager *)phoneNotificationCoalescingManager { NSLog(@"LN__%s", __func__) %log; NCNotificationListCoalescingManager * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setHiddenPreviewCoalescingManager:(NCNotificationListCoalescingManager *)hiddenPreviewCoalescingManager { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NCNotificationListCoalescingManager *)hiddenPreviewCoalescingManager { NSLog(@"LN__%s", __func__) %log; NCNotificationListCoalescingManager * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setNotificationListCoalescingManager:(NCNotificationListCoalescingManager *)notificationListCoalescingManager { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NCNotificationListCoalescingManager *)notificationListCoalescingManager { NSLog(@"LN__%s", __func__) %log; NCNotificationListCoalescingManager * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setStaticContentProviders:(NSMutableDictionary *)staticContentProviders { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (NSMutableDictionary *)staticContentProviders { NSLog(@"LN__%s", __func__) %log; NSMutableDictionary * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setAdjunctListViewController:(SBDashBoardNotificationAdjunctListViewController *)adjunctListViewController { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (SBDashBoardNotificationAdjunctListViewController *)adjunctListViewController { NSLog(@"LN__%s", __func__) %log; SBDashBoardNotificationAdjunctListViewController * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setPage:( id <SBDashBoardPageViewControllerProtocol> )page { NSLog(@"LN__%s", __func__) %log; %orig; }
+// - ( id <SBDashBoardPageViewControllerProtocol> )page { NSLog(@"LN__%s", __func__) %log;  id <SBDashBoardPageViewControllerProtocol>  r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+- (void)_setHasUserInteraction:(_Bool )hasUserInteraction { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )_hasUserInteraction { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setLayoutStrategy:(SBDashBoardLayoutStrategy *)layoutStrategy { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (SBDashBoardLayoutStrategy *)layoutStrategy { NSLog(@"LN__%s", __func__) %log; SBDashBoardLayoutStrategy * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool )hasContent { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+
+- (void)_testingCoalesceExpandedBundleForNotificationRequest:(id)arg1 withCompletion:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_testingExpandCoalescedBundleForNotificationRequest:(id)arg1 withCompletion:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (id)_testingNotificationRequestWithIdentifier:(id)arg1 sectionIdentifier:(id)arg2 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)notificationListScrollView { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)clearAll { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)settings:(id)arg1 changedValueForKey:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)updateForLegibilitySettings:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_setQuickActionsHidden:(_Bool)arg1 forReason:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_dismissDNDBedtimeGreetingViewAnimated:(_Bool)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_evaluateShouldShowGreeting:(id)arg1 animated:(_Bool)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)dismissDNDBedtimeGreetingViewController:(id)arg1 animated:(_Bool)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)dndBedtimeControllerShowGreetingStateDidChange:(id)arg1 animated:(_Bool)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)dndBedtimeControllerActiveStateDidChange:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)notificationListCoalescingManager:(id)arg1 shouldCoalesceBySectionNotificationRequest:(id)arg2 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)notificationListCoalescingManager:(id)arg1 isExpandedCoalescedBundleForNotificationRequest:(id)arg2 inSection:(unsigned long long)arg3 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)notificationListCoalescingManager:(id)arg1 requestsClearingFromIncomingSectionNotificationRequests:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListCoalescingManager:(id)arg1 requestsClearingNotificationRequests:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListCoalescingManager:(id)arg1 requestsReloadingNotificationRequests:(id)arg2 inSection:(unsigned long long)arg3 delayAnimation:(_Bool)arg4 clearCache:(_Bool)arg5 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListCoalescingManager:(id)arg1 requestsUpdatingNotificationRequests:(id)arg2 inSection:(unsigned long long)arg3 delayAnimation:(_Bool)arg4 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListCoalescingManager:(id)arg1 requestsRemovingNotificationRequests:(id)arg2 inSection:(unsigned long long)arg3 delayAnimation:(_Bool)arg4 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListCoalescingManager:(id)arg1 requestsRemovingNotificationRequest:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListCoalescingManager:(id)arg1 requestsInsertingNotificationRequests:(id)arg2 inSection:(unsigned long long)arg3 delayAnimation:(_Bool)arg4 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListCoalescingManager:(id)arg1 requestsInsertingNotificationRequest:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (unsigned long long)_dynamicCoalescingThreshold { NSLog(@"LN__%s", __func__) %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)_turnOffDynamicCoalescingIfNecessary { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (unsigned long long)_incomingSectionAllNotificationRequestsCount { NSLog(@"LN__%s", __func__) %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)_turnOnDynamicCoalescingIfNecessary { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_updateNotificationCoalescingForUpdatedSectionSettings:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)_uncoalescedNotificationRequestThreadsCount { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_removeCoalescedNotificationRequestFromHistorySectionIfNecessary:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)_isCoalescingIdentifier:(id)arg1 forSectionIdentifier:(id)arg2 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_coalesceExpandedBundlesIfNecessaryForSectionIdentifier:(id)arg1 inSection:(unsigned long long)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_coalesceExpandedBundlesIfNecessaryForSectionIdentifier:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_coalesceExpandedBundleForCoalescingIdentifier:(id)arg1 inSection:(unsigned long long)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_coalesceExpandedBundlesInSection:(unsigned long long)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_updateUncoalescedNotificationRequestThreadsOnRemovingNotificationRequest:(id)arg1 inSection:(unsigned long long)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_updateUncoalescedNotificationRequestThreadsOnRemovingNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (id)_notificationRequestsForCoalescingIdentifier:(id)arg1 inSection:(unsigned long long)arg2 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)_recoalesceUncoalescedNotificationRequests { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_expandCoalescedBundleForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)_shouldExpandCoalescedBundleForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_isNotificationRequest:(id)arg1 coalescedByNotificationListCoalescingManager:(id)arg2 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_shouldCoalesceNotificationRequest:(id)arg1 targetSection:(unsigned long long)arg2 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_shouldCoalesceNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_isGroupingSettingOnForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_isExpandedCoalescedBundleForNotificationRequest:(id)arg1 inSection:(unsigned long long)arg2 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_isExpandedCoalescedBundleForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_removeClearedNotificationRequestIfNecessary:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)_isClearedNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_screenTimeExpirationApplicationsDidChange:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)_isBundleIdentifierBlockedForScreenTimeExpiration:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_repostFilteredNotificationRequestsWithSectionIdentifier:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_repostFilteredNotificationRequests { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_removeFilteredNotificationRequest:(id)arg1 forCoalescedNotification:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_filterNotificationRequest:(id)arg1 forCoalescedNotification:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (unsigned long long)_matchingIndexInFilteredListForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (_Bool)_isNotificationRequestInFilteredList:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_shouldFilterNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)stateService:(id)arg1 didReceiveDoNotDisturbStateUpdate:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_updateNotificationListWhenDNDIsDeactivated { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_updateNotificationListWhenDNDIsActivated { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)_shouldDNDDelayDeliveryOfNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_updateRaiseGestureDetectionForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)_allowsDateViewOrProudLockScroll { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_hideRequestsFromIncomingSectionListIfNecessaryForSectionSettings:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_hideOrShowRequestsForParentNotificationSectionSettings:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_hideOrShowRequestsForNotificationSectionSettings:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)_notificationSectionSettingsHidesSection:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_hideOrShowNotificationSectionForAuthenticationChange { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_invalidateTimerIfSnoozeAlarmNotificationStaticContentProvider:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (id)_snoozeAlarmNotificationStaticContentProviderForNotificationRequest:(id)arg1 viewController:(id)arg2 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)_threadIdentifierForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)_identifierForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (double)_minListHeightForPadding { NSLog(@"LN__%s", __func__) %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (_Bool)_shouldPadBottomSpacing { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (double)_minInsetsToPushDateOffScreen { NSLog(@"LN__%s", __func__) %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (struct CGSize)_adjunctListViewSizeIncludingSpacing { NSLog(@"LN__%s", __func__) %log; struct CGSize r = %orig; return r; }
+- (struct CGSize)_adjunctListViewSize { NSLog(@"LN__%s", __func__) %log; struct CGSize r = %orig; return r; }
+- (struct UIEdgeInsets)_listViewDefaultContentInsets { NSLog(@"LN__%s", __func__) %log; struct UIEdgeInsets r = %orig; return r; }
+- (struct CGRect)_suggestedListViewFrame { NSLog(@"LN__%s", __func__) %log; struct CGRect r = %orig; return r; }
+- (void)_performClearActionForNotificationsCoalescedWithNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)_isNotificationRequestForRecentsSection:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)_migrateAllPersistentNotificationRequestsFromSection:(unsigned long long)arg1 toSection:(unsigned long long)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_migrateHiddenPreviewNotificationRequestsToCoalescingManagerFromSection:(unsigned long long)arg1 toSection:(unsigned long long)arg2 passingTest:(id)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_migrateAllCoalescedNotificationRequestsFromSection:(unsigned long long)arg1 toSection:(unsigned long long)arg2 passingTest:(id)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_updateNotificationListOnDeviceReauthentication { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_enumerateAllCoalescingManagersWithBlock:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_enumerateAllNotificationListGroupingSectionsWithBlock:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (unsigned long long)_targetSectionForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (id)_coalescingManagerForNotificationRequest:(id)arg1 targetSection:(unsigned long long)arg2 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)_coalescingManagerForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)_isWalletNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_isClockSnoozeAlarmNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)_isPhoneNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)updateAppearanceForStatusBarBackgroundHidden:(_Bool)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (double )distanceFromBarToContent { NSLog(@"LN__%s", __func__) %log; double  r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)updateAppearanceForHidden:(_Bool)arg1 offset:(struct CGPoint)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (double )topContentInset { NSLog(@"LN__%s", __func__) %log; double  r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (double )clippingOffset { NSLog(@"LN__%s", __func__) %log; double  r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)_setAllowsCriticalAlerts:(_Bool)arg1 forNotificationRequest:(id)arg2 withSectionIdentifier:(id)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_setDeliverQuietly:(_Bool)arg1 forNotificationRequest:(id)arg2 withSectionIdentifier:(id)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_setAllowsNotifications:(_Bool)arg1 forNotificationRequest:(id)arg2 withSectionIdentifier:(id)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_notificationManagementSuggestionResponse:(long long)arg1 forNotificationRequest:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_hideOrRevealSiriSuggestionsForAuthenticationChange { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_removeSuggestionIfNecessaryForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_checkIfNotificationManagementSuggestionIsNecessaryForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_addRemoteNotificationManagementSuggestionForRequest:(id)arg1 withResponse:(_Bool)arg2 score:(double)arg3 sectionSettings:(id)arg4 isPromotingSuggestion:(_Bool)arg5 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_createNewPromotingSuggestionForNotificationRequest:(id)arg1 sectionSettings:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_createNewQuietingSuggestionForNotificationRequest:(id)arg1 sectionSettings:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_addSuggestionForNotificationRequest:(id)arg1 managementContentProvider:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_coalesceHiddenPreviewNotificationsForSectionIdentifier:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_coalesceHiddenPreviewNotifications { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_expandHiddenPreviewNotificationsForSectionIdentifier:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_expandHiddenPreviewNotifications { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (id)_hiddenPreviewContentProvidersToRevealContentFromProviders:(id)arg1 forSectionIdentifier:(id)arg2 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)_updateHiddenPreviewContentProvidersForAuthenticationStateChange:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)_isContentSuppressedForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (unsigned long long)_groupingSettingForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (unsigned long long)_contentPreviewSettingForNotificationRequest:(id)arg1 { NSLog(@"LN__%s", __func__) %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (id)_notificationSectionSettingsForSectionIdentifier:(id)arg1 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)_requestAuthenticationWithCompletion:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_performOperationWithAuthenticationIfNecessaryForRequest:(id)arg1 completionBlock:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (double)_statusBarHeight { NSLog(@"LN__%s", __func__) %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)_updateCaptureOnlyMaterialView { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)_allowNotificationsRevealPolicy { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (struct CGPoint)_determineMaxContentOffsetForContentInset:(struct UIEdgeInsets)arg1 { NSLog(@"LN__%s", __func__) %log; struct CGPoint r = %orig; return r; }
+- (double)_sanitizedContentOffset:(double)arg1 forContentInset:(struct UIEdgeInsets)arg2 { NSLog(@"LN__%s", __func__) %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)_updateListViewContentInset { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_layoutListView { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_updatePresentation { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_performSelfCorrectingListViewAction:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)_setListHasContent:(_Bool)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)layoutListView { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)wouldHandleButtonEvent:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)handleEvent:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (long long)presentationTransition { NSLog(@"LN__%s", __func__) %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long)presentationPriority { NSLog(@"LN__%s", __func__) %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (long long)presentationType { NSLog(@"LN__%s", __func__) %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (void)didReceiveRaiseGesture { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationManagementViewPresenterDidDismissManagementView:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationManagementViewPresenterWillPresentManagementView:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationManagementViewPresenter:(id)arg1 setAllowsCriticalAlerts:(_Bool)arg2 forNotificationRequest:(id)arg3 withSectionIdentifier:(id)arg4 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationManagementViewPresenter:(id)arg1 setDeliverQuietly:(_Bool)arg2 forNotificationRequest:(id)arg3 withSectionIdentifier:(id)arg4 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationManagementViewPresenter:(id)arg1 setAllowsNotifications:(_Bool)arg2 forNotificationRequest:(id)arg3 withSectionIdentifier:(id)arg4 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (id)notificationManagementViewPresenter:(id)arg1 sectionSettingsForSectionIdentifier:(id)arg2 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)notificationManagementContentProvider:(id)arg1 keepNotificationsForSectionIdentifierForNotificationRequest:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationManagementContentProvider:(id)arg1 hasUpdatedContentForRequest:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationManagementContentProvider:(id)arg1 requestsPresentingNotificationManagementViewType:(unsigned long long)arg2 forNotificationRequest:(id)arg3 withPresentingView:(id)arg4 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)contentChanged:(_Bool)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)homeGestureParticipantOwningHomeGestureDidChange:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 requestsCoalescingNotificationRequest:(id)arg2 inSection:(unsigned long long)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (id)notificationListViewController:(id)arg1 coalescingIdentifierForNotificationRequest:(id)arg2 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)notificationListViewController:(id)arg1 leadingNotificationRequestForCoalescingIdentifier:(id)arg2 inSection:(unsigned long long)arg3 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)notificationListViewController:(id)arg1 isExpandedCoalescedBundleForNotificationRequest:(id)arg2 inSection:(unsigned long long)arg3 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)notificationListViewController:(id)arg1 requestsClearingNotificationRequestsForCoalescingIdentifier:(id)arg2 inSection:(unsigned long long)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 requestsCoalescingExpandedBundleForCoalescingIdentifier:(id)arg2 inSection:(unsigned long long)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 requestsExpandingCoalescedBundleForNotificationRequest:(id)arg2 withCompletion:(id)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (id)notificationListViewController:(id)arg1 sectionSettingsForSectionIdentifier:(id)arg2 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)notificationListViewController:(id)arg1 requestsPresentingManagementViewForNotificationRequest:(id)arg2 withPresentingView:(id)arg3 completion:(id)arg4 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (id)legibilitySettingsForNotificationListViewController:(id)arg1 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)settleHomeAffordanceAnimationBehaviorDescriptionForNotificationListViewController:(id)arg1 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)unhideHomeAffordanceAnimationSettingsForNotificationListViewController:(id)arg1 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)hideHomeAffordanceAnimationSettingsForNotificationListViewController:(id)arg1 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)notificationListViewController:(id)arg1 keyboardAssertionForGestureWindow:(id)arg2 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)notificationListViewController:(id)arg1 shouldSuppressContentForNotificationRequest:(id)arg2 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)notificationListViewController:(id)arg1 shouldHorizontallyPanNotificationCell:(id)arg2 withTouch:(id)arg3 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)notificationListViewController:(id)arg1 willDismissLongLookForNotificationViewController:(id)arg2 withTransitionCoordinator:(id)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 willPresentLongLookForNotificationViewController:(id)arg2 withTransitionCoordinator:(id)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 didRemoveNotificationRequestInLongLook:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 willRemoveNotificationRequestInLongLook:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 setRaiseGestureDetectionEnabled:(_Bool)arg2 forNotificationRequest:(id)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 willDismissRemainingContentWithTransitionCoordinator:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewControllerIsUpdatingContent:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 willPresentInitialContentWithTransitionCoordinator:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)notificationListViewController:(id)arg1 shouldAllowInteractionsForNotificationRequest:(id)arg2 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)notificationListViewController:(id)arg1 didEndDisplayingCellForNotificationRequest:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (id)notificationListViewController:(id)arg1 auxiliaryOptionsContentProviderForNotificationRequest:(id)arg2 withLongLook:(_Bool)arg3 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)notificationListViewController:(id)arg1 isPresentingNotificationManagementSuggestionForNotificationRequest:(id)arg2 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)notificationListViewController:(id)arg1 staticContentProviderForNotificationRequest:(id)arg2 viewController:(id)arg3 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)notificationUsageTrackingStateForNotificationListViewController:(id)arg1 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)notificationListViewController:(id)arg1 requestsClearingNotificationRequestsFromDate:(id)arg2 toDate:(id)arg3 inSections:(id)arg4 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 requestsClearingNotificationRequestsInSections:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 requestsClearingFromIncomingSectionNotificationRequests:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 requestsExecuteAction:(id)arg2 forNotificationRequest:(id)arg3 requestAuthentication:(_Bool)arg4 withParameters:(id)arg5 completion:(id)arg6 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 requestPermissionToExecuteAction:(id)arg2 forNotificationRequest:(id)arg3 withParameters:(id)arg4 completion:(id)arg5 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 shouldFinishLongLookTransitionForNotification:(id)arg2 withCompletionBlock:(id)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (struct CGRect)notificationListViewController:(id)arg1 convertRect:(struct CGRect)arg2 toLocalWindowSpaceFromView:(id)arg3 { NSLog(@"LN__%s", __func__) %log; struct CGRect r = %orig; return r; }
+- (_Bool)notificationListViewControllerShouldAllowRecentNotificationsReveal:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (double)defaultRestingOffsetExcludingAdjunct { NSLog(@"LN__%s", __func__) %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (void)scrollViewWillEndDragging:(id)arg1 withVelocity:(struct CGPoint)arg2 targetContentOffset:( struct CGPoint *)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 didEndUserInteractionWithNotificationViewController:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewController:(id)arg1 willBeginUserInteractionWithNotificationViewController:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewControllerDidEndScrolling:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewControllerDidScroll:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)notificationListViewControllerDidSignificantUserInteraction:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)dismissNotificationInLongLookAnimated:(_Bool)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isPresentingNotificationInLongLook { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isNotificationContentExtensionVisible:(id)arg1 { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)adjunctListViewController:(id)arg1 didUpdateWithSize:(struct CGSize)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (double)interItemSpacingToMimicForAdjunctListViewController:(id)arg1 { NSLog(@"LN__%s", __func__) %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (struct UIEdgeInsets)insetMarginsToMimicForAdjunctListViewController:(id)arg1 { NSLog(@"LN__%s", __func__) %log; struct UIEdgeInsets r = %orig; return r; }
+- (struct CGSize)sizeToMimicForAdjunctListViewController:(id)arg1 { NSLog(@"LN__%s", __func__) %log; struct CGSize r = %orig; return r; }
+- (id)groupNameForRecipe:(long long)arg1 adjunctListViewController:(id)arg2 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)updateNotificationSectionSettings:(id)arg1 previousSectionSettings:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)withdrawNotificationRequest:(id)arg1 forCoalescedNotification:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)updateNotificationRequest:(id)arg1 forCoalescedNotification:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)postNotificationRequest:(id)arg1 forCoalescedNotification:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (struct CGSize)effectiveContentSizeForScrollView:(id)arg1 { NSLog(@"LN__%s", __func__) %log; struct CGSize r = %orig; return r; }
+- (void)performCustomTransitionToVisible:(_Bool)arg1 withAnimationSettings:(id)arg2 completion:(id)arg3 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)rebuildEverythingForReason:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)aggregateBehavior:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)aggregateAppearance:(id)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool)shouldAutomaticallyForwardAppearanceMethods { NSLog(@"LN__%s", __func__) %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)viewWillDisappear:(_Bool)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)viewWillAppear:(_Bool)arg1 { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)viewWillLayoutSubviews { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)viewDidLoad { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (void)resetContentOffset { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (_Bool )isShowingMediaControls { NSLog(@"LN__%s", __func__) %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)dealloc { NSLog(@"LN__%s", __func__) %log; %orig; }
+- (id)initWithNibName:(id)arg1 bundle:(id)arg2 { NSLog(@"LN__%s", __func__) %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)appearanceIdentifier { NSLog(@"LN__%s", __func__) %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (UIColor *)backgroundColor { NSLog(@"LN__%s", __func__) %log; UIColor * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (long long )backgroundStyle { NSLog(@"LN__%s", __func__) %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (NSSet *)components { NSLog(@"LN__%s", __func__) %log; NSSet * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)dashBoardIdentifier { NSLog(@"LN__%s", __func__) %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)debugDescription { NSLog(@"LN__%s", __func__) %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { NSLog(@"LN__%s", __func__) %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { NSLog(@"LN__%s", __func__) %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+// - (_UILegibilitySettings *)legibilitySettings { NSLog(@"LN__%s", __func__) %log; _UILegibilitySettings * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (long long )participantState { NSLog(@"LN__%s", __func__) %log; long long  r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (Class )superclass { NSLog(@"LN__%s", __func__) %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end
