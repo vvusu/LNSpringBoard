@@ -7,5 +7,5 @@ iPhone手机越狱插件 - 拦截系统通知消息 (Intercept Notification)
 ![](./resources/image1.png)
 
 ## 锁屏状态下拦截系统通知
-![](./resources/image1.png)
+![](./resources/image2.png)
 
