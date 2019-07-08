@@ -1,5 +1,5 @@
-/Users/vvusu/Reverse/Code/SpringBoard/springboard_tweak/.theos/obj/arm64/Tweak.xm.83e6fea7.o: \
-  /Users/vvusu/Reverse/Code/SpringBoard/springboard_tweak/.theos/obj/arm64/Tweak.xm.mm \
+/Users/vvusu/Reverse/Code/SpringBoard/LNSpringBoard/springboard_tweak/.theos/obj/armv7/Tweak.xm.f3e0df8b.o: \
+  /Users/vvusu/Reverse/Code/SpringBoard/LNSpringBoard/springboard_tweak/.theos/obj/armv7/Tweak.xm.mm \
   /opt/theos/Prefix.pch \
   /opt/theos/vendor/include/_Prefix/BackwardsCompat.h \
   /opt/theos/vendor/include/_Prefix/IOSMacros.h \
